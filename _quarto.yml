@@ -5,7 +5,7 @@ project:
     - docs/index.qmd
 
 website:
-  title: "Hello world"
+  title: "Digital Garden"
   repo-url: https://github.com/MadeInShineA/digital-garden
   repo-actions: [edit]
   navbar:
