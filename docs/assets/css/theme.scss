@@ -1,0 +1,150 @@
+/*-- scss:defaults --*/
+$link-color: #39729E;
+$text-muted: #6a737b;
+
+/* Catppuccin Latte Palette */
+$catte-base: #EFF1F5;
+$catte-text: #4C4F69;
+$catte-subtext: #6C6F85;
+$catte-overlay: #7C7F93;
+$catte-surface: #CCD0DA;
+$catte-red: #D20F39;
+$catte-peach: #FE640B;
+$catte-yellow: #DF8E1D;
+$catte-green: #40A02B;
+$catte-teal: #179299;
+$catte-sky: #04A5E5;
+$catte-sapphire: #209FB5;
+$catte-blue: #1E66F5;
+$catte-lavender: #7287FD;
+$catte-mauve: #8839EF;
+$catte-pink: #EA76CB;
+$catte-flamingo: #DD7878;
+$catte-rosewater: #DC8A78;
+
+/*-- scss:rules --*/
+
+.layout-example {
+  background: $gray-500;
+  color: $white;
+  text-align: center;
+  margin-bottom: 1em;
+  font-family: $font-family-monospace;
+  font-size: .875em;
+  font-weight: 600;
+  padding-top: 1em;
+  border-radius: 3px;
+}
+
+.left {
+  text-align: left;
+  padding-left: 1em;
+}
+
+.right {
+  text-align: right;
+  padding-right: 1em;
+}
+
+.hello-quarto-banner h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+#quarto-announcement {
+  padding: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  color: $white;
+  background-color: #447099;
+}
+
+#quarto-announcement a {
+  color: $white;
+}
+
+table, table.table {
+  text-align: center;
+}
+
+/* -- Catppuccin Light Code Theme -- */
+
+/* Code block background and text */
+pre>code.sourceCode, .sourceCode pre, div.sourceCode {
+  background-color: $catte-base !important;
+  color: $catte-text !important;
+  border: 1px solid $catte-surface;
+  border-radius: 6px;
+}
+
+/* Syntax highlighting via CSS variables */
+:root {
+  /* Base colors */
+  --exercise-editor-hl-text: #{$catte-text};
+  --exercise-editor-hl-bg: #{$catte-base};
+
+  /* Syntax tokens */
+  --exercise-editor-hl-va: #{$catte-blue};        /* variableName */
+  --exercise-editor-hl-fn: #{$catte-mauve};       /* function */
+  --exercise-editor-hl-kw: #{$catte-mauve};       /* keyword */
+  --exercise-editor-hl-st: #{$catte-green};       /* string */
+  --exercise-editor-hl-cm: #{$catte-overlay};     /* comment */
+  --exercise-editor-hl-num: #{$catte-peach};      /* number */
+  --exercise-editor-hl-op: #{$catte-mauve};       /* operator */
+  --exercise-editor-hl-at: #{$catte-lavender};    /* attribute */
+  --exercise-editor-hl-dt: #{$catte-yellow};      /* datatype */
+  --exercise-editor-hl-bn: #{$catte-peach};       /* builtin */
+  --exercise-editor-hl-dv: #{$catte-peach};       /* decimal */
+  --exercise-editor-hl-fl: #{$catte-peach};       /* float */
+  --exercise-editor-hl-co: #{$catte-overlay};     /* constant */
+  --exercise-editor-hl-im: #{$catte-green};       /* import */
+  --exercise-editor-hl-an: #{$catte-sky};         /* annotation */
+}
+
+/* Direct token overrides (backup) */
+pre>code.sourceCode span.tok-variableName,
+.exercise-editor-body>.cm-editor span.tok-variableName {
+  color: $catte-blue !important;
+}
+
+pre>code.sourceCode span.tok-function,
+.exercise-editor-body>.cm-editor span.tok-function {
+  color: $catte-mauve !important;
+}
+
+pre>code.sourceCode span.tok-keyword,
+.exercise-editor-body>.cm-editor span.tok-keyword {
+  color: $catte-mauve !important;
+}
+
+pre>code.sourceCode span.tok-string,
+.exercise-editor-body>.cm-editor span.tok-string {
+  color: $catte-green !important;
+}
+
+pre>code.sourceCode span.tok-comment,
+.exercise-editor-body>.cm-editor span.tok-comment {
+  color: $catte-overlay !important;
+  font-style: italic;
+}
+
+pre>code.sourceCode span.tok-number,
+.exercise-editor-body>.cm-editor span.tok-number {
+  color: $catte-peach !important;
+}
+
+pre>code.sourceCode span.tok-operator,
+.exercise-editor-body>.cm-editor span.tok-operator {
+  color: $catte-mauve !important;
+}
+
+/* Code copy button */
+div.sourceCode > button.code-copy-button {
+  color: $catte-text;
+  background-color: $catte-surface;
+}
+
+div.sourceCode > button.code-copy-button:hover {
+  background-color: $catte-overlay;
+  color: $catte-base;
+}

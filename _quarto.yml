@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - docs/index.qmd
+
+website:
+  title: "Hello world"
+  repo-url: https://github.com/MadeInShineA/digital-garden
+  repo-actions: [edit]
+  navbar:
+    tools:
+      - icon: github
+        href: https://github.com/MadeInShineA/digital-garden
+        target: _blank
+        text: Project GitHub
+
+  page-footer:
+    left: |
+      Made with [Quarto](https://quarto.org/){target="_blank"} and [Quarto Live](https://r-wasm.github.io/quarto-live/){target="_blank"}
+    center:
+      - text: "Digital Garden | © 2026"
+    right:
+      - icon: github
+        href: https://github.com/MadeInShineA/digital-garden
+        target: _blank
+        aria-label: Project GitHub
+
+format:
+  live-html:
+    respect-user-color-scheme: true
+    toc: true
+    toc-title: "Table of Content"
+    toc-depth: 4
+    theme:
+      light: [cosmo, docs/assets/css/theme.scss]
+      dark: [cosmo, docs/assets/css/theme-dark.scss]
+    code-copy: true
+    code-overflow: wrap
+    pyodide: true

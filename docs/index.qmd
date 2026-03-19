@@ -1,0 +1,39 @@
+---
+title: Hello world
+format: live-html
+execute:
+  echo: false
+pyodide:
+  packages:
+    - matplotlib
+    - numpy
+    - cowsay
+---
+
+```{pyodide}
+#| autorun: true
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.normal(170, 10, 250)
+plt.hist(x)
+plt.show()
+```
+```{ojs}
+//| echo: false
+viewof cow_text = Inputs.text(
+  {
+    value: "Hello world",
+    label: "Cow says:",
+  }
+)
+```
+
+```{pyodide}
+#| autorun: true
+#| input:
+#|   - cow_text
+import cowsay
+
+print(cowsay.get_output_string("cow", cow_text))
+```

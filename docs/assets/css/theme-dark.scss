@@ -1,0 +1,301 @@
+/*-- scss:defaults --*/
+
+$blue: #447099;
+$red: #D44000;
+$orange: #EE6331;
+$yellow: #E7B10A;
+$green: #72994E;
+$teal: #419599;
+$cyan: #75A8D9;
+$black: #000;
+$white: #fff;
+$gray: #404041;
+$gray-dark: #343a40;
+$gray-100: #f8f8f8;
+$gray-200: #C2C2C4;
+$gray-300: #949494;
+$gray-400: #707073;
+$gray-500: #495057;
+$gray-600: #404041;
+$gray-700: #333333;
+$gray-800: #242426;
+$gray-900: #151519;
+$default: $gray-900;
+$primary: $cyan;
+$secondary: $gray-400;
+$success: $green;
+$info: $yellow;
+$warning: $orange;
+$danger: $red;
+
+// Base document colors
+$body-bg: $gray-900;
+$body-color: $gray-100;
+$link-color: $cyan;
+
+$light: rgb(32.4,32.4,34.2);
+
+// Navigation element colors
+$footer-bg: $gray-900;
+$navbar-bg: shade-color($gray-800, 10%);
+
+// Code blocks
+$code-block-bg-alpha: -.9;
+
+// Bootstrap popovers
+$popover-bg: #242424;
+
+// Bootstrap inputs
+$input-bg: #242424;
+$dropdown-bg: $body-bg;
+$dropdown-color: $body-color;
+$dropdown-link-color: $body-color;
+$dropdown-link-hover-bg: $gray-600;
+$dropdown-link-hover-color: #eee;
+$nav-tabs-link-hover-border-color: rgb(80, 80, 80);
+
+$border-color: rgba($gray-800, 0.5);
+
+$mono-background-color: rgba(0,0,0,0);
+$code-color: rgb(192, 128, 216);
+$nav-tabs-link-active-color: $body-color;
+$toc-inactive-border: rgba($gray-800, 0.5);
+$input-text-background-color: $gray-800;
+$input-group-addon-bg: $gray-800;
+$carousel-dark-caption-color: $body-color;
+$pagination-disabled-bg: rgb(24,24,24);
+
+$text-muted: lighten(#6a737b, 20%);
+
+/* Catppuccin Mocha Palette */
+$cat-mocha-base: #1E1E2E;
+$cat-mocha-text: #CDD6F4;
+$cat-mocha-subtext: #A6ADC8;
+$cat-mocha-overlay: #6C7086;
+$cat-mocha-surface: #313244;
+$cat-mocha-red: #F38BA8;
+$cat-mocha-peach: #FAB387;
+$cat-mocha-yellow: #F9E2AF;
+$cat-mocha-green: #A6E3A1;
+$cat-mocha-teal: #94E2D5;
+$cat-mocha-sky: #89DCEB;
+$cat-mocha-sapphire: #74C7EC;
+$cat-mocha-blue: #89B4FA;
+$cat-mocha-lavender: #B4BEFE;
+$cat-mocha-mauve: #CBA6F7;
+$cat-mocha-pink: #F5C2E7;
+$cat-mocha-flamingo: #F2CDCD;
+$cat-mocha-rosewater: #F5E0DC;
+
+/*-- scss:rules --*/
+
+/*Homepage custom css overrides */
+
+/* homepage hero link accessibiility hack to make contrast 4.5:1 */
+
+.hero-banner a:not(.btn) {
+  color: #D1DBE5;
+}
+
+.hero-banner .btn-action-primary, .get-started .btn-action-primary {
+  background-color: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  color: $dark;
+}
+
+.hero-banner .btn-action-primary:hover, .get-started .btn-action-primary:hover {
+  background-color: #D1DBE5;
+  border: 1px solid #f8f8f8;
+  color: $dark;
+}
+
+.hero-banner .btn-secondary {
+  background-color: transparent;
+  border: 1px solid #f8f8f8;
+  color: #f8f8f8;
+}
+
+.hero-banner .btn-secondary:hover {
+  background-color: #305775;
+}
+
+.hello-quarto-banner .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  border: none;
+  border-bottom: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  background-color: transparent;
+}
+
+.hello-quarto-banner .nav-link {
+  color: #ffffff !important;
+}
+
+.bg-color {
+  background-color: $body-bg;
+}
+
+.hello-output {
+  border: 1px solid $gray-700;
+}
+
+body.quarto-light .alt-background {
+  background-color: #17212B;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.layout-example {
+  background: $gray-700;
+}
+
+.hello-quarto-banner h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.code-with-filename .code-with-filename-file pre {
+  color: #ddd;
+}
+
+pre code {
+  color: $body-color;
+}
+
+figcaption code,
+dl code,
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+  background-color: $mono-background-color;
+}
+
+details > summary {
+  color: $text-muted;
+}
+
+#quarto-announcement {
+  padding: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  color: $white;
+  background-color: #ff0039;
+}
+
+#quarto-announcement a {
+  color: $white;
+}
+
+/*Footer Posit logo color for dark mode*/
+img.footer-logo {
+  color: #ffffff;
+}
+
+#gantt {
+  background-color: white;
+  line:not(.today) {
+    stroke: black!important
+  }
+}
+
+/* -- Catppuccin Mocha Code Theme -- */
+
+/* Code block background and text */
+pre>code.sourceCode, .sourceCode pre, div.sourceCode {
+  background-color: $cat-mocha-base !important;
+  color: $cat-mocha-text !important;
+  border: 1px solid $cat-mocha-surface;
+  border-radius: 6px;
+}
+
+/* Syntax highlighting via CSS variables */
+:root {
+  /* Base colors */
+  --exercise-editor-hl-text: #{$cat-mocha-text};
+  --exercise-editor-hl-bg: #{$cat-mocha-base};
+
+  /* Syntax tokens - Catppuccin Mocha mapping */
+  --exercise-editor-hl-va: #{$cat-mocha-blue};        /* variableName */
+  --exercise-editor-hl-fn: #{$cat-mocha-mauve};       /* function */
+  --exercise-editor-hl-kw: #{$cat-mocha-mauve};       /* keyword */
+  --exercise-editor-hl-st: #{$cat-mocha-green};       /* string */
+  --exercise-editor-hl-cm: #{$cat-mocha-overlay};     /* comment */
+  --exercise-editor-hl-num: #{$cat-mocha-peach};      /* number */
+  --exercise-editor-hl-op: #{$cat-mocha-mauve};       /* operator */
+  --exercise-editor-hl-at: #{$cat-mocha-lavender};    /* attribute */
+  --exercise-editor-hl-dt: #{$cat-mocha-yellow};      /* datatype */
+  --exercise-editor-hl-bn: #{$cat-mocha-peach};       /* builtin */
+  --exercise-editor-hl-dv: #{$cat-mocha-peach};       /* decimal */
+  --exercise-editor-hl-fl: #{$cat-mocha-peach};       /* float */
+  --exercise-editor-hl-co: #{$cat-mocha-lavender};    /* constant */
+  --exercise-editor-hl-im: #{$cat-mocha-green};       /* import */
+  --exercise-editor-hl-an: #{$cat-mocha-sky};         /* annotation */
+}
+
+/* Direct token overrides (backup for CodeMirror/Highlight.js) */
+pre>code.sourceCode span.tok-variableName,
+.exercise-editor-body>.cm-editor span.tok-variableName {
+  color: $cat-mocha-blue !important;
+}
+
+pre>code.sourceCode span.tok-function,
+.exercise-editor-body>.cm-editor span.tok-function {
+  color: $cat-mocha-mauve !important;
+}
+
+pre>code.sourceCode span.tok-keyword,
+.exercise-editor-body>.cm-editor span.tok-keyword {
+  color: $cat-mocha-mauve !important;
+}
+
+pre>code.sourceCode span.tok-string,
+.exercise-editor-body>.cm-editor span.tok-string {
+  color: $cat-mocha-green !important;
+}
+
+pre>code.sourceCode span.tok-comment,
+.exercise-editor-body>.cm-editor span.tok-comment {
+  color: $cat-mocha-overlay !important;
+  font-style: italic;
+}
+
+pre>code.sourceCode span.tok-number,
+.exercise-editor-body>.cm-editor span.tok-number {
+  color: $cat-mocha-peach !important;
+}
+
+pre>code.sourceCode span.tok-operator,
+.exercise-editor-body>.cm-editor span.tok-operator {
+  color: $cat-mocha-mauve !important;
+}
+
+pre>code.sourceCode span.tok-type,
+.exercise-editor-body>.cm-editor span.tok-type {
+  color: $cat-mocha-yellow !important;
+}
+
+pre>code.sourceCode span.tok-title,
+.exercise-editor-body>.cm-editor span.tok-title {
+  color: $cat-mocha-sky !important;
+}
+
+/* Code copy button styling */
+div.sourceCode > button.code-copy-button {
+  color: $cat-mocha-text;
+  background-color: $cat-mocha-surface;
+  border: 1px solid $cat-mocha-overlay;
+}
+
+div.sourceCode > button.code-copy-button:hover {
+  background-color: $cat-mocha-overlay;
+  color: $cat-mocha-base;
+}
+
+/* Inline code styling */
+:not(pre) > code {
+  background-color: $cat-mocha-surface !important;
+  color: $cat-mocha-text !important;
+  border: 1px solid $cat-mocha-overlay;
+}

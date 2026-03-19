@@ -1,0 +1,5 @@
+.quarto
+.direnv
+_site
+
+/.quarto/
